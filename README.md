@@ -1,3 +1,12 @@
+# 组件划分
+  1. App组件
+  2. TodoList组件
+  3. 子组件
+    - Input
+    - List
+      - index
+      - Item
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

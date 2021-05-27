@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoLIst from './components/TodoList';
+import UseStateHook from './hooks/useState';
+import ToolBar, { ThemeContext, themes } from './hooks/useContext';
+import Counter from './hooks/useReducer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoLIst />
+      <br />
+      {/* <UseStateHook></UseStateHook> */}
+      <ThemeContext.Provider value={themes.dark}>
+        <ToolBar />
+      </ThemeContext.Provider>
+      <br />
+      <Counter initialCount={0}></Counter>
     </div>
   );
 }
